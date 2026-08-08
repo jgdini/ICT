@@ -125,6 +125,11 @@ a { color: inherit; text-decoration: none; }
 }
 
 .brand { display: flex; align-items: center; gap: 12px; }
+.brand__logo {
+  height: 52px;
+  width: auto;
+  display: block;
+}
 .brand__mark {
   width: 42px; height: 42px;
   display: flex; align-items: center; justify-content: center;
