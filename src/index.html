@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ICT — Industrial Chemicals Trading</title>
+<noscript><meta http-equiv="refresh" content="0; url=en/index.html"></noscript>
+<style>
+  :root{ --red:#c1272d; --ink:#1c1c1e; }
+  *{box-sizing:border-box;}
+  body{
+    margin:0; min-height:100vh; display:flex; align-items:center; justify-content:center;
+    font-family:"Segoe UI",Arial,sans-serif; background:#101012; color:#fff;
+  }
+  .wrap{ text-align:center; padding:40px; }
+  .mark{ width:56px; height:56px; margin:0 auto 18px; }
+  h1{ font-size:1.4rem; margin:0 0 6px; }
+  p{ color:#aaa; margin:0 0 26px; font-size:0.9rem; }
+  .picks{ display:flex; gap:12px; justify-content:center; flex-wrap:wrap; }
+  .picks a{
+    padding:12px 22px; border-radius:999px; border:1px solid #444; color:#fff;
+    text-decoration:none; font-weight:600; font-size:0.9rem; transition:background 0.2s, border-color 0.2s;
+  }
+  .picks a:hover{ background:var(--red); border-color:var(--red); }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <svg class="mark" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="36" fill="none" stroke="#c1272d" stroke-width="16" stroke-dasharray="170 400" stroke-linecap="round" transform="rotate(-45 50 50)"/></svg>
+    <h1>ICT — Industrial Chemicals Trading</h1>
+    <p>Redirecting to English… / Redirecionando para Português… / 正在跳转到中文…</p>
+    <div class="picks">
+      <a href="en/index.html">English</a>
+      <a href="pt/index.html">Português</a>
+      <a href="zh/index.html">中文</a>
+    </div>
+  </div>
+  <script>
+    (function () {
+      try {
+        var saved = localStorage.getItem("ict-lang");
+        var lang = saved || (navigator.language || "en").toLowerCase();
+        var target = "en/index.html";
+        if (lang.indexOf("pt") === 0) target = "pt/index.html";
+        else if (lang.indexOf("zh") === 0) target = "zh/index.html";
+        window.location.replace(target);
+      } catch (e) {
+        window.location.replace("en/index.html");
+      }
+    })();
+  </script>
+</body>
+</html>
